@@ -15,6 +15,7 @@
     "paths": {
       "#db": ["./db/index.ts"],
       "#schema/*": ["./db/schema/*"],
+      "#modules/*": ["./modules/*"],
       "#types/*": ["./types/*"],
       "#utils/*": ["./utils/*"]
     }
