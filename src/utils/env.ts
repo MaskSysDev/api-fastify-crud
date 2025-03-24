@@ -7,6 +7,7 @@ const envSchema = z.object({
     .enum(['development', 'production', 'test'])
     .default('development'),
   LOG_LEVEL: z.string().default('info'),
+  DATABASE_URL: z.string().url(),
 });
 
 const _env = envSchema.safeParse(process.env);
