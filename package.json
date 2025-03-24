@@ -6,9 +6,9 @@
   "private": true,
   "license": "MIT",
   "scripts": {
-    "dev": "tsx watch --env-file .env src/index.ts",
+    "dev": "tsx watch src/index.ts",
     "build": "tsc",
-    "start": "node --env-file .env .",
+    "start": "node .",
     "lint": "eslint . --max-warnings 0",
     "lint:fix": "eslint --fix . --max-warnings 0",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,md,mdx}\" --cache",
