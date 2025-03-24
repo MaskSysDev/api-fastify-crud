@@ -1,4 +1,5 @@
-import { errorHandler, errorResponse } from '#utils/error.js';
+import { dataSampleRoutes } from '#modules/data-sample/data-sample.routes.js';
+import { errorHandler } from '#utils/error.js';
 import { logger } from '#utils/logger.js';
 import { fastifyCors } from '@fastify/cors';
 import { fastifySwagger } from '@fastify/swagger';
@@ -67,26 +68,7 @@ export async function buildServer() {
     },
   );
 
-  app.get(
-    '/health-check',
-    {
-      schema: {
-        tags: ['Health Check'],
-        description: 'Health Check API Fastify CRUD.',
-        response: {
-          200: z
-            .object({
-              status: z.string(),
-            })
-            .describe('Health Check API Fastify CRUD.'),
-          ...errorResponse,
-        },
-      },
-    },
-    async () => {
-      return { status: 'ok' };
-    },
-  );
+  app.register(dataSampleRoutes, { prefix: 'api/v1' });
 
   return app;
 }

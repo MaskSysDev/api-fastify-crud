@@ -55,6 +55,9 @@
     "#schema/*": [
       "./dist/db/schema/*"
     ],
+    "#modules/*": [
+      "./dist/modules/*"
+    ],
     "#types/*": [
       "./dist/types/*"
     ],
