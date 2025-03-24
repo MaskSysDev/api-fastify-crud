@@ -13,6 +13,8 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
+      "#db": ["./db/index.ts"],
+      "#schema/*": ["./db/schema/*"],
       "#types/*": ["./types/*"],
       "#utils/*": ["./utils/*"]
     }
